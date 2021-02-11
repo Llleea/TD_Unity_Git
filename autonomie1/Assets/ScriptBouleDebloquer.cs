@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScriptBouleDebloquer : MonoBehaviour
 {
     bool temoin = false;
-    float vitesse = 0.02f;
+   float vitesse = 0.02f;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +34,14 @@ public class ScriptBouleDebloquer : MonoBehaviour
         if (Input.GetKey("down"))
         {
             transform.Translate(0, 0, +vitesse, Space.World);
+        }
+        if (Input.GetKey("e"))
+        {
+            vitesse += 0.01f;
+        }
+        if (Input.GetKey("a"))
+        {
+            vitesse -= 0.01f;
         }
     }
 
